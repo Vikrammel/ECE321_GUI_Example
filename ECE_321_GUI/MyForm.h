@@ -1,6 +1,8 @@
 #pragma once
+#include "Header.h"
 
 namespace ECE_321_GUI {
+	tmpClass myTmpClass;
 
 	using namespace System;
 	using namespace System::ComponentModel;
@@ -204,11 +206,7 @@ namespace ECE_321_GUI {
 #pragma endregion
 	private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e) {
 
-				 if (label1->Text == "Please Enter Your Name")
-					 label1->Text = "Thank you.";
-				 else
-					 label1->Text = "Please Enter Your Name";
-				 
+				 ConvertString(textBox1->Text, myTmpClass.firstName);
 	}
 	};
 }
